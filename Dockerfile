@@ -6,7 +6,7 @@ RUN pip install pylint
 
 COPY Entrypoint.sh /
 RUN chmod +x Entrypoint.sh
-ENTRYPOINT ["Entrypoint.sh"]
+ENTRYPOINT ["/Entrypoint.sh"]
 
 # COPY pylint_check.py /
 # RUN chmod +x /pylint_check.py
