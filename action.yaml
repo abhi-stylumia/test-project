@@ -1,0 +1,15 @@
+name: 'Run Pylint check'
+description: 'Run pylint check on the project.'
+inputs:
+  fail_under:
+    description: 'Threshold value for pylint score'
+    required: true
+    default: 8
+outputs:
+  pylint_score:
+    description: 'Pylint score'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.fail_under }}
