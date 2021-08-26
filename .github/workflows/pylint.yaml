@@ -12,6 +12,6 @@ jobs:
       uses: ./
       id: pylint_check
       with: 
-        fail_under: 8
+        fail_under: 1
     - name: Show pylint score
       run: echo "pylint score = ${{ steps.pylint_check.outputs.pylint_score }}"
