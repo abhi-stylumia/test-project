@@ -1,0 +1,17 @@
+name: Pylint check
+
+on: [pull_request]
+
+jobs:
+  custom_pylint_check:
+    runs-on: ubuntu-latest
+    name: Check code with pylint
+    steps:
+    - uses: actions/checkout@v2
+    - name: Analysing the code with pylint
+      uses: ./
+      id: pylint_check
+      with: 
+        fail_under: 8
+    - name: Show pylint score
+      run: echo "pylint score = ${{ steps.pylint_check.outputs.pylint_score }}"
