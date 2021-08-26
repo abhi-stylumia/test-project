@@ -1,5 +1,2 @@
-def f():
-    print "OK"
-
-def p():
-  print "NO"
+def some_function():
+    pass
