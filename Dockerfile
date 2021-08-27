@@ -13,7 +13,7 @@ RUN chmod +x Entrypoint.sh
 COPY install_requirements.sh /
 RUN chmod +x install_requirements.sh
 
-RUN /install_requirements.sh
+# RUN /install_requirements.sh
 
 
 ENTRYPOINT ["/Entrypoint.sh"]
