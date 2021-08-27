@@ -5,6 +5,9 @@ inputs:
     description: 'Threshold value for pylint score'
     required: true
     default: 8
+  os_dependencies:
+    description: 'OS specific packages to install using apt'
+    required: false
 outputs:
   pylint_score:
     description: 'Pylint score'

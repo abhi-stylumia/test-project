@@ -1,6 +1,6 @@
 name: Pylint check
 
-on: [pull_request]
+on: [push]
 
 jobs:
   custom_pylint_check:
@@ -13,5 +13,6 @@ jobs:
       id: pylint_check
       with: 
         fail_under: 8
+        os_dependencies: mysql-devel
     - name: Show pylint score
       run: echo "pylint score = ${{ steps.pylint_check.outputs.pylint_score }}"
