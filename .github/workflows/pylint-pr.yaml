@@ -13,6 +13,6 @@ jobs:
       id: pylint_check
       with: 
         fail_under: 8
-        os_dependencies: libmariadb-dev-compat libmariadb-dev
+        os_dependencies: libmariadb-dev gcc
     - name: Show pylint score
       run: echo "pylint score = ${{ steps.pylint_check.outputs.pylint_score }}"
